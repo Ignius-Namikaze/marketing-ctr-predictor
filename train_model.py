@@ -6,6 +6,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_absolute_error
+from sklearn.linear_model import LinearRegression 
 import joblib
 import os # To ensure directory exists
 
@@ -76,7 +77,7 @@ def train_model(df):
     # Create the full pipeline including preprocessing and the model
     model_pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('regressor', RandomForestRegressor(n_estimators=20, random_state=42, n_jobs=-1)) # n_jobs=-1 uses all processors
+        ('regressor', LinearRegression())
     ])
 
     # Train the model
