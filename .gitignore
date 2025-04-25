@@ -1,7 +1,6 @@
+artifacts/
+artifacts_downloaded/
 venv/
 __pycache__/
-artifacts_downloaded/
 *.pyc
-*.joblib # Usually okay to commit small models, but can exclude if large
-artifacts/ # Or commit the artifacts folder if needed for deployment
-*.DS_Store # macOS specific
+*.DS_Store
