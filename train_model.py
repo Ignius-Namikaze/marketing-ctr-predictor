@@ -76,7 +76,7 @@ def train_model(df):
     # Create the full pipeline including preprocessing and the model
     model_pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('regressor', RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)) # n_jobs=-1 uses all processors
+        ('regressor', RandomForestRegressor(n_estimators=20, random_state=42, n_jobs=-1)) # n_jobs=-1 uses all processors
     ])
 
     # Train the model
